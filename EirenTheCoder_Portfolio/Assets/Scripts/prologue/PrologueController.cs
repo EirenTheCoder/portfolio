@@ -12,7 +12,7 @@ public class PrologueController : MonoBehaviour
     {
         if (excecuted == false) startScene();
     
-       hasFinished =  Utils.animHasFinished(anim,"blackScreen");
+       hasFinished =  Utils.animHasFinished(anim,"changeScene");
 
         if (hasFinished) //Scene jump
            Debug.Log("Jump to next scene") ;
