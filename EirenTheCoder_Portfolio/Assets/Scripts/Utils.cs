@@ -9,7 +9,7 @@ public static class Utils
 
         bool finished = false;
 
-        if (animationToEvaluate.GetCurrentAnimatorStateInfo(0).IsName(nameOfAnimation)) finished = true ;
+        if (!animationToEvaluate.GetCurrentAnimatorStateInfo(0).IsName(nameOfAnimation)) finished = true ;
 
         return finished;
 
