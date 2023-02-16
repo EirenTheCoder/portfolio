@@ -47,10 +47,15 @@ public class MichiScript : MonoBehaviour
         switch (a) {
 
             case 0:
+                //Here you will spawn tall
+                break;
+            case 1:
+                //Here you will spawn shorty
+                break;
+            case 2:
+                //Here you will spawn temporal
                 
                 break;
-            case 1:break;
-            case 2:break;
         
         }
     
