@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MichiScript : MonoBehaviour
 {
+
+
+
     enum TypeOfBuilding {
     
     tally,shorty,temporal
@@ -11,6 +14,8 @@ public class MichiScript : MonoBehaviour
     };
     private int a;
     private TypeOfBuilding building;
+    
+    
     [SerializeField] private float speed;
     // Update is called once per frame
     void Update()
@@ -48,6 +53,7 @@ public class MichiScript : MonoBehaviour
 
             case 0:
                 //Here you will spawn tall
+
                 break;
             case 1:
                 //Here you will spawn shorty
@@ -61,6 +67,8 @@ public class MichiScript : MonoBehaviour
     
     
     }
+
+    
     
 
 }
