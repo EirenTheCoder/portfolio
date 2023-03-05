@@ -7,68 +7,59 @@ public class MichiScript : MonoBehaviour
 
 
 
-    enum TypeOfBuilding {
+   public  enum TypeOfBuilding {
     
     tally,shorty,temporal
     
     };
     private int a;
-    private TypeOfBuilding building;
+   public TypeOfBuilding building;
     
     
     [SerializeField] private float speed;
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position += new Vector3(Time.deltaTime*-speed,0);
+
+    }
+
+    private void OnBecameInvisible()
+    {
+        reasoning();
     }
 
     void reasoning() {
+        int ran;
 
+        ran = Random.Range(0, 2);
         switch (building) {
 
-            case TypeOfBuilding.tally:
-                
+           case TypeOfBuilding.tally:
 
-                
-                
+                if (ran == 0) { speed -= Random.Range(0, 3); }
+
+                else { speed += Random.Range(0, 3); }
+               break;
+       case TypeOfBuilding.shorty:
+
+                if (ran == 0) { speed -= Random.Range(2, 5); }
+
+                else { speed += Random.Range(3, 6); }
                 break;
-            case TypeOfBuilding.shorty:
-                
-                
-                break;
 
-            case TypeOfBuilding.temporal:
+  case TypeOfBuilding.temporal:
 
+                if (ran == 0) { speed -= Random.Range(1, 3); }
 
+                else { speed += Random.Range(1, 3); }
                 break;
 
         };
-    }
-    void spawn() {
-        
-        a = Random.Range(0, 3);
 
-        switch (a) {
-
-            case 0:
-                //Here you will spawn tall
-
-                break;
-            case 1:
-                //Here you will spawn shorty
-                break;
-            case 2:
-                //Here you will spawn temporal
-                
-                break;
-        
-        }
-    
-    
+        transform.position = new Vector3(14.0600004f, -3.75f, 0);
     }
 
-    
     
 
 }
