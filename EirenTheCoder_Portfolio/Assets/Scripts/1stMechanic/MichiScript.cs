@@ -31,7 +31,7 @@ public class MichiScript : MonoBehaviour
 
     void reasoning() {
         int ran;
-
+transform.position= new Vector3(12.05,-3.084666,0);
         ran = Random.Range(0, 2);
         switch (building) {
 
