@@ -7,13 +7,7 @@ public class MichiScript : MonoBehaviour
 
 
 
-   public  enum TypeOfBuilding {
-    
-    tally,shorty,temporal
-    
-    };
     private int a;
-   public TypeOfBuilding building;
     
     
     [SerializeField] private float speed;
@@ -31,7 +25,7 @@ public class MichiScript : MonoBehaviour
 
     void reasoning() {
       
-transform.position = new Vector3(7.68f,-3.084666f );
+transform.position = new Vector3(9.98f,-4.184084f);
 
 }
 }
