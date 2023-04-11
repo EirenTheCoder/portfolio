@@ -26,7 +26,7 @@ public class MichiScript : MonoBehaviour
 
  void reasoning() {
       
-transform.position = new Vector3(9.98f,-4.184084f);
+transform.position = new Vector3(7,-3.084666f);
 
 }
 

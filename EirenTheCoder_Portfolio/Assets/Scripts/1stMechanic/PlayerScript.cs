@@ -9,7 +9,7 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private Rigidbody2D catRB;
     [SerializeField] private float groundCheckDistance;
     [SerializeField]bool canJump;
-    [SerializeField]GameObject blade;
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,15 +24,6 @@ public class PlayerScript : MonoBehaviour
 
 
    
-            if(Input.GetKeyDown(KeyCode.A)){
-
-                blade.SetActive(true);
-            }
-
-            else{
-
-                blade.SetActive(false);
-            }
 
         
         if (Input.GetKeyDown(KeyCode.Space)&&canJump) isJump = 1;
