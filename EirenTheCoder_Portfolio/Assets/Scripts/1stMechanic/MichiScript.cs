@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class MichiScript : MonoBehaviour
 {
-
-
-
     private int a;
-  
-    
+   
     [SerializeField] private float speed;
     // Update is called once per frame
     void Update()
@@ -26,9 +22,9 @@ public class MichiScript : MonoBehaviour
 
  void reasoning() {
       
-transform.position = new Vector3(7,-3.084666f);
+    transform.position = new Vector3(7,-3.084666f);
 
-}
+    }
 
 }
    

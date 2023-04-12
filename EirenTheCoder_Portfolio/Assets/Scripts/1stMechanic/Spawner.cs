@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Spawner : MonoBehaviour
 {
 private GameObject miau;
-[SerializeField] private Text ScoreTXT;
+
   
     // Update is called once per frame
     void Update()
@@ -22,7 +22,6 @@ void spawn(){
        for(int i=0;i<3;i++){
 
           miau =  Instantiate(Resources.Load<GameObject>("MichiNPC"),new Vector3(Random.Range(-8,9),-7.63f),Quaternion.identity);
-            Debug.Log(miau);
 
         }
 
