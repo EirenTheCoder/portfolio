@@ -40,7 +40,7 @@ public class PlayerScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag =="buildings") canJump = true;
-       if(collision.gameObject.name =="Michi") SceneManager.LoadScene(0);
+       if(collision.gameObject.name =="Michi") Utils.changeScene("Menu");
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -48,6 +48,6 @@ public class PlayerScript : MonoBehaviour
     }
     private void OnBecameInvisible()
     {
-        SceneManager.LoadScene(0);
+       Utils.changeScene("Menu");
     }
 }

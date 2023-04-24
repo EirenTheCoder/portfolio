@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public static class Utils
 {
 
@@ -14,6 +15,10 @@ public static class Utils
         return finished;
 
     }
-    
+    public static void changeScene(string sceneName) {
+        SceneManager.LoadScene(sceneName); 
+        
+        
+        }
 
 }
