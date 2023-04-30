@@ -48,6 +48,6 @@ public class PlayerScript : MonoBehaviour
     }
     private void OnBecameInvisible()
     {
-       Utils.changeScene("Menu");
+       Utils.changeScene("FirstHUD");
     }
 }
