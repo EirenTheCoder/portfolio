@@ -4,5 +4,29 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Prologue.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/FirstHUD.unity
+    guid: b3c6e38402c7e134bbf366d7c9625018
+  - enabled: 1
+    path: Assets/Scenes/Mechanics/FirstMechanic2D.unity
+    guid: 78f7943a551408f429a7bae8c9834591
+  - enabled: 1
+    path: Assets/Scenes/Mechanics/SecondMechanic2D.unity
+    guid: 400e6cbb7b05943428d9fc1d39a52e4c
+  - enabled: 1
+    path: Assets/Scenes/Mechanics/ThirdMechanic2D.unity
+    guid: cfffba0f23fcd6c4b8403ed29265894c
+  - enabled: 1
+    path: Assets/Scenes/Mechanics/FourthMechanic2D.unity
+    guid: e1c3924f01d72424ab3fc9c6765096f8
+  - enabled: 1
+    path: Assets/Scenes/Mechanics/FifthMechanic2D.unity
+    guid: f55b5d2309a24064db4b0edc99aa9876
+  - enabled: 1
+    path: Assets/Scenes/Mechanics/SixthMechanic2D.unity
+    guid: 84ba0847739c44d4c86368758f9a2a16
   m_configObjects: {}

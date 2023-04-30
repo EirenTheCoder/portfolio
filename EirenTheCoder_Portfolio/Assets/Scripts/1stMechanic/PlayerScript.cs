@@ -8,8 +8,8 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private float jforce;
     [SerializeField] private Rigidbody2D catRB;
     [SerializeField] private float groundCheckDistance;
-    private float bfd=0.1f;
     [SerializeField]bool canJump;
+
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +39,8 @@ public class PlayerScript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        canJump = true;
+        if(collision.gameObject.tag =="buildings") canJump = true;
+       if(collision.gameObject.name =="Michi") Utils.changeScene("Menu");
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -47,6 +48,6 @@ public class PlayerScript : MonoBehaviour
     }
     private void OnBecameInvisible()
     {
-        SceneManager.LoadScene(0);
+       Utils.changeScene("Menu");
     }
 }
