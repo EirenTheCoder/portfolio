@@ -450,6 +450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1233448770}
+  MAX_SCORE: 5000
   player: {fileID: 1286312669}
   finalPortal: {fileID: 1295581104}
 --- !u!4 &975221799

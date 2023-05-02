@@ -8,7 +8,7 @@ public class SCORE : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreText;
     private float score=0;
-    private float MAX_SCORE = 10000;
+   [SerializeField] private float MAX_SCORE = 10000;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject finalPortal;
     // Start is called before the first frame update
