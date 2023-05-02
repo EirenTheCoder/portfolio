@@ -22,7 +22,8 @@ void spawn(){
        for(int i=0;i<3;i++){
 
           miau =  Instantiate(Resources.Load<GameObject>("MichiNPC"),new Vector3(Random.Range(-8,9),-7.63f),Quaternion.identity);
-
+            float posX = miau.transform.position.x;
+            transform.position = new Vector3(posX + i, miau.transform.position.y);
         }
 
 
