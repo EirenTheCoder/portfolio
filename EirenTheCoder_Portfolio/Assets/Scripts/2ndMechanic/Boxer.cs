@@ -2,17 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boxer : MonoBehaviour
+public class Boxer:MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   protected float life { get; set; }
+    protected float dmg { get; set; }
+    protected float speed { get; set; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
