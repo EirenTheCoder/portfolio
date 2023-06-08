@@ -57,6 +57,13 @@ public class FistScript : MonoBehaviour
 
 
         }
+
+
+        if(Input.GetMouseButtonDown(0)){
+
+            //Here the fist will punch!!
+
+        }
     }
 
     IEnumerator FistNPC()
