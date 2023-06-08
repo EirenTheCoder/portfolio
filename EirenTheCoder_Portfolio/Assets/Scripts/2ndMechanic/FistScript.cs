@@ -62,7 +62,7 @@ public class FistScript : MonoBehaviour
         if(Input.GetMouseButtonDown(0)){
 
             //Here the fist will punch!!
-
+            transform.position = new Vector3(Mathf.Lerp(transform.position.x, transform.position.x+.1f, 0.1f), transform.position.y, transform.position.z);
         }
     }
 
