@@ -14,56 +14,30 @@ public class FistScript : MonoBehaviour
 
     [SerializeField] Fighters fighters;
     Vector3 mousePos = Vector3.zero;
-
     Vector3 direction = Vector3.zero;
-    
-    [SerializeField] private float speed = 1f;
-    private float startingRotation = 0f;
+    [SerializeField] private Camera cam;
     float angleInRadians = 0f;
-    float angleInDegrees = 0f;
-    float clampedAngle = 0f; 
-    float currentAngle = 0f;
-    float targetAngle = 0f;
-   
-    Quaternion targetRotation = Quaternion.identity;
-    Quaternion smoothedRotation = Quaternion.identity;
-      [SerializeField] private float maxRotation = 45f; // Maximum rotation in degrees
-    [SerializeField] private float minRotation = -45f; // Minimum rotation in degrees
-
-
-    private void Update()
+       private void Update()
     {
         switch (fighters)
         {
             case Fighters.Player:
-         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-         direction = mousePos - transform.position;
-         angleInRadians = Mathf.Atan2(direction.y, 1f);
-         angleInDegrees = Mathf.Rad2Deg * angleInRadians;
-         targetAngle = angleInDegrees - startingRotation;
-         clampedAngle = Mathf.Clamp(targetAngle, minRotation, maxRotation);
-
-        // Smoothly rotate the object towards the target angle
-         targetRotation = Quaternion.Euler(0f, 0f, clampedAngle);
-         smoothedRotation = Quaternion.RotateTowards(transform.rotation, targetRotation, speed * Time.deltaTime);
-        transform.rotation = smoothedRotation;
-     
-      break;
+           
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = 0;
+        direction = mousePos - transform.position;
+        transform.up = direction;
+             break;
             case Fighters.Npc:
 
                 StartCoroutine("FistNPC");
 
                 break;
-
-
         }
-
-
-        if(Input.GetMouseButtonDown(0)){
-
-            //Here the fist will punch!!
-            transform.position = new Vector3(Mathf.Lerp(transform.position.x, transform.position.x+.1f, 0.1f), transform.position.y, transform.position.z);
-        }
+    //     if(Input.GetMouseButtonDown(0)){
+    //         //Here the fist will punch!!
+    //         transform.position = new Vector3(Mathf.Lerp(transform.position.x, transform.position.x+.1f, 0.1f), transform.position.y, transform.position.z);
+    //     }
     }
 
     IEnumerator FistNPC()
